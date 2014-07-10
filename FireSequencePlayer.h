@@ -2,6 +2,7 @@
 
 #include "FireSequence.h"
 
+
 #define UNFINISHED_STATE 0
 #define FINISHED_STATE 1
 
@@ -12,7 +13,7 @@ class FireSequencePlayer {
   private:
     FireSequence _sequence;
     unsigned int _startTime;
-    uint8_t *_noteStates;
+    int *_noteStates;
     unsigned int *_actualNoteStartTimes;
     unsigned int _nextNoteToStartIndex;
 

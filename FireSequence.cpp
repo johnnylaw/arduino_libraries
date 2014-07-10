@@ -11,9 +11,10 @@ FireSequence::~FireSequence() {
   free (_startTimes);
 }
 
-void FireSequence::addNote(FireNote note) {
+void FireSequence::addNote(FireNote note, unsigned int time) {
   if (_noteIndex < _numberOfNotes) {
     _notes[_noteIndex] = note;
+    _startTimes[_noteIndex] = time;
     _noteIndex++;
   }
 }

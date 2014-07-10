@@ -1,9 +1,9 @@
 #include <Arduino.h>
 #include "FireSequencePlayer.h"
 
-FireSequencePlayer::FireSequencePlayer(FireSequence sequence, unsigned int delay) : _sequence(sequence) {
+FireSequencePlayer::FireSequencePlayer(FireSequence sequence, unsigned int delay = 0) : _sequence(sequence) {
   _startTime = millis() + delay;
-  _noteStates = (uint8_t *) malloc(sequence.numberOfNotes() * sizeof(uint8_t));
+  _noteStates = (int *) malloc(sequence.numberOfNotes() * sizeof(int));
   _actualNoteStartTimes = (unsigned int *) malloc(sequence.numberOfNotes() * sizeof(unsigned int));
 }
 

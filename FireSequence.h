@@ -14,7 +14,7 @@ class FireSequence {
     int _numberOfNotes;
 
   public:
-    void addNote(FireNote note);
+    void addNote(FireNote note, unsigned int time);
     int numberOfNotes();
     FireNote note(int index);
     unsigned int startTime(int index);
